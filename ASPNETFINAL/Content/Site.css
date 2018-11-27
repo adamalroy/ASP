@@ -77,9 +77,9 @@ article {
 }
 
 a {
-    color: white;
+    color: black;
 }
 
     a:hover {
-        color: lightgrey;
+        color: darkgrey;
     }
