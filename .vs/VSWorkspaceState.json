@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\ASPNETFINAL"
+    "\\ASPNETFINAL",
+    "\\ASPNETFINAL\\Views",
+    "\\ASPNETFINAL\\Views\\Shared"
   ],
+  "SelectedNode": "\\ASPNETFINAL\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }
