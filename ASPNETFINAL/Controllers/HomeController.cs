@@ -15,14 +15,14 @@ namespace ASPNETFINAL.Controllers
 
         public ActionResult SellGames()
         {
-            ViewBag.Message = "Your application description page.";
+          
 
             return View();
         }
 
         public ActionResult BuyGames()
         {
-            ViewBag.Message = "Your contact page.";
+           
 
             return View();
         }
