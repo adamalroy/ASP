@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ASPNETFINAL.Models
 {
-    [Table("Games")]
+    [Table("Game")]
     public class Game
     {
         

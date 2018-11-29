@@ -7,11 +7,11 @@ using System.Web;
 
 namespace ASPNETFINAL.Models
 {
-    [Table("Orders")]
+    [Table("Order")]
     public class Orders
     {
 
-        public int OrderId { get; set; }
+        public int OrdersId { get; set; }
 
         [Required]
         public DateTime OrderDate { get; set; }

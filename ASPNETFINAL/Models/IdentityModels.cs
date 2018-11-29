@@ -27,6 +27,10 @@ namespace ASPNETFINAL.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Cart> Cart { get; set; }
+        public DbSet<Orders> Order { get; set; }
+        public DbSet<Game> Game { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
