@@ -1,22 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
 namespace ASPNETFINAL.Models
 {
+    [Table("Games")]
     public class Game
     {
-        [Required]
+        
         public int GameId { get; set; }
+
         [Required]
+        [MaxLength(255)]
         public string GameName { get; set; }
+
         [Required]
+        [MaxLength(255)]
         public string Genre { get; set; }
+
         [Required]
+        [MaxLength(255)]
         public string Condition { get; set; }
+
         [Required]
-        public double Price { get; set; }
+        [Range(0.0,300.00)]
+        public Decimal Price { get; set; }
     }
 }
