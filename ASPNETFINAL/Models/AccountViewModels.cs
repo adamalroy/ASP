@@ -65,9 +65,26 @@ namespace ASPNETFINAL.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "First Name")]
+        public string UserFirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
+        public string UserLastName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Username")]
+        public string UserNameValue { get; set; }
+
+
+        //!!!!!!!!!Code to give user a selection option for the role they are signing-up for
+        //public Role Role { get; set; } //what will display for user
+        //public int RoleId { get; set; }
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
