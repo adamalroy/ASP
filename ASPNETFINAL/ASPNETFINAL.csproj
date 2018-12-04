@@ -217,6 +217,10 @@
     <Compile Include="Migrations\201812041923333_AddedImageForReal.Designer.cs">
       <DependentUpon>201812041923333_AddedImageForReal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812042045522_IDK.cs" />
+    <Compile Include="Migrations\201812042045522_IDK.Designer.cs">
+      <DependentUpon>201812042045522_IDK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -317,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812041923333_AddedImageForReal.resx">
       <DependentUpon>201812041923333_AddedImageForReal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812042045522_IDK.resx">
+      <DependentUpon>201812042045522_IDK.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
