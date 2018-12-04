@@ -204,9 +204,9 @@
     <Compile Include="Migrations\201811292051332_InitialCreate.Designer.cs">
       <DependentUpon>201811292051332_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812041906011_added_Image_Class.cs" />
-    <Compile Include="Migrations\201812041906011_added_Image_Class.Designer.cs">
-      <DependentUpon>201812041906011_added_Image_Class.cs</DependentUpon>
+    <Compile Include="Migrations\201812041934591_ImgClassAttempt.cs" />
+    <Compile Include="Migrations\201812041934591_ImgClassAttempt.Designer.cs">
+      <DependentUpon>201812041934591_ImgClassAttempt.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -299,8 +299,8 @@
     <EmbeddedResource Include="Migrations\201811292051332_InitialCreate.resx">
       <DependentUpon>201811292051332_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812041906011_added_Image_Class.resx">
-      <DependentUpon>201812041906011_added_Image_Class.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812041934591_ImgClassAttempt.resx">
+      <DependentUpon>201812041934591_ImgClassAttempt.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

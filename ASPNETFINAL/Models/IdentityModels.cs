@@ -14,7 +14,7 @@ namespace ASPNETFINAL.Models
         public string UserLastName { get; set; }
 
         public string UserNameValue { get; set; }
-
+        public string UserRole { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

@@ -81,6 +81,10 @@ namespace ASPNETFINAL.Models
         [Display(Name = "Username")]
         public string UserNameValue { get; set; }
 
+        [Required]
+        [Display(Name = "Role")]
+        public string RoleId { get; set; }
+
 
         //!!!!!!!!!Code to give user a selection option for the role they are signing-up for
         //public Role Role { get; set; } //what will display for user
