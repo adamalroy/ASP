@@ -7,13 +7,13 @@ namespace ASPNETFINAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class added_Image_Class : IMigrationMetadata
+    public sealed partial class ImgClassAttempt : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(added_Image_Class));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ImgClassAttempt));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812041906011_added_Image_Class"; }
+            get { return "201812041934591_ImgClassAttempt"; }
         }
         
         string IMigrationMetadata.Source

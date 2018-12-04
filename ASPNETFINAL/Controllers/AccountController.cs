@@ -139,6 +139,7 @@ namespace ASPNETFINAL.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            
             return View();
         }
 
@@ -149,13 +150,15 @@ namespace ASPNETFINAL.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
+
             if (ModelState.IsValid)
             {
                 // Added first, last, and user name to User
-                var user = new ApplicationUser { UserName = model.UserNameValue, Email = model.UserNameValue };
+                var user = new ApplicationUser { UserName = model.UserNameValue, Email = model.UserNameValue, UserRole = model.RoleId };
                 user.UserFirstName = model.UserFirstName;
                 user.UserLastName = model.UserLastName;
                 user.UserNameValue = model.UserNameValue;
+                user.UserRole = model.RoleId;
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -166,7 +169,11 @@ namespace ASPNETFINAL.Controllers
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
+                    if(user.UserRole != "Seller")
+                    {
+                        user.UserRole = "User";
+                    }
+                    await this.UserManager.AddToRoleAsync(user.Id, user.UserRole);
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
