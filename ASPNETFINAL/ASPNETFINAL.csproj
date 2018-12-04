@@ -204,11 +204,16 @@
     <Compile Include="Migrations\201811292051332_InitialCreate.Designer.cs">
       <DependentUpon>201811292051332_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812041906011_added_Image_Class.cs" />
+    <Compile Include="Migrations\201812041906011_added_Image_Class.Designer.cs">
+      <DependentUpon>201812041906011_added_Image_Class.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Image.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -293,6 +298,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201811292051332_InitialCreate.resx">
       <DependentUpon>201811292051332_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812041906011_added_Image_Class.resx">
+      <DependentUpon>201812041906011_added_Image_Class.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
