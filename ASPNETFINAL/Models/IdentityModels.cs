@@ -29,7 +29,8 @@ namespace ASPNETFINAL.Models
     {
         public DbSet<Cart> Cart { get; set; }
         public DbSet<Orders> Order { get; set; }
-        public DbSet<Game> Game { get; set; }
+        public DbSet<Game> Games { get; set; }
+       
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
