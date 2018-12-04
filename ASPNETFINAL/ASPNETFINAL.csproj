@@ -195,6 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -207,6 +208,14 @@
     <Compile Include="Migrations\201812041934591_ImgClassAttempt.cs" />
     <Compile Include="Migrations\201812041934591_ImgClassAttempt.Designer.cs">
       <DependentUpon>201812041934591_ImgClassAttempt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812041921046_AddedImage.cs" />
+    <Compile Include="Migrations\201812041921046_AddedImage.Designer.cs">
+      <DependentUpon>201812041921046_AddedImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812041923333_AddedImageForReal.cs" />
+    <Compile Include="Migrations\201812041923333_AddedImageForReal.Designer.cs">
+      <DependentUpon>201812041923333_AddedImageForReal.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -278,6 +287,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Game\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,6 +311,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812041934591_ImgClassAttempt.resx">
       <DependentUpon>201812041934591_ImgClassAttempt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812041921046_AddedImage.resx">
+      <DependentUpon>201812041921046_AddedImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812041923333_AddedImageForReal.resx">
+      <DependentUpon>201812041923333_AddedImageForReal.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
