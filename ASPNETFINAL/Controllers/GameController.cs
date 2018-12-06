@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace ASPNETFINAL.Controllers
 {
@@ -35,6 +36,7 @@ namespace ASPNETFINAL.Controllers
         }
 
         // GET: Game/Create
+        [Authorize(Roles ="Seller")]
         public ActionResult Create()
         {
             return View();
@@ -43,10 +45,13 @@ namespace ASPNETFINAL.Controllers
         // POST: Game/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        
         public ActionResult Create([Bind(Include = "GameId, GameName, Genre, Condition, Price, ImgId" )] Game game)
         {
             try
             {
+                game.SellerId = User.Identity.GetUserId();
+                game.ImgId = 1;
                 // TODO: Add insert logic here
                 db.Games.Add(game);
                 db.SaveChanges(); 

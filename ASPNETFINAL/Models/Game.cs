@@ -30,6 +30,9 @@ namespace ASPNETFINAL.Models
         public Decimal Price { get; set; }
 
         [Required]
-        public int SellerId { get; set; }
+        public string SellerId { get; set; }
+        
+        [Required]
+        public int ImgId { get; set; }
     }
 }
