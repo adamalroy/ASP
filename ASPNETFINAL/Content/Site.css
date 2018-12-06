@@ -20,7 +20,17 @@ textarea {
 }
 
 .My_Title {
+    margin: 15px;
+    padding-top: 40px;
+    text-align: center;
+    color: white;
     font-size: 64px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-image: url(/Content/Assets/gameTradersBanner.JPG) !important;
+    background-repeat: no-repeat;
+    height: 180px;
+    text-shadow: 3px 3px 4px #2b2e33;
 }
 
 body {
@@ -83,3 +93,4 @@ a {
     a:hover {
         color: darkgrey;
     }
+
