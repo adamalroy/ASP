@@ -225,6 +225,10 @@
     <Compile Include="Migrations\201812042051434_tryTwo.Designer.cs">
       <DependentUpon>201812042051434_tryTwo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812061904419_AddedSellerIdFieldtoGames.cs" />
+    <Compile Include="Migrations\201812061904419_AddedSellerIdFieldtoGames.Designer.cs">
+      <DependentUpon>201812061904419_AddedSellerIdFieldtoGames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -331,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812042051434_tryTwo.resx">
       <DependentUpon>201812042051434_tryTwo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812061904419_AddedSellerIdFieldtoGames.resx">
+      <DependentUpon>201812061904419_AddedSellerIdFieldtoGames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
