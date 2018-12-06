@@ -229,6 +229,18 @@
     <Compile Include="Migrations\201812061904419_AddedSellerIdFieldtoGames.Designer.cs">
       <DependentUpon>201812061904419_AddedSellerIdFieldtoGames.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812061921267_changeSellerIDToString.cs" />
+    <Compile Include="Migrations\201812061921267_changeSellerIDToString.Designer.cs">
+      <DependentUpon>201812061921267_changeSellerIDToString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812061937360_addedImgId.cs" />
+    <Compile Include="Migrations\201812061937360_addedImgId.Designer.cs">
+      <DependentUpon>201812061937360_addedImgId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812061938393_addImgId2.cs" />
+    <Compile Include="Migrations\201812061938393_addImgId2.Designer.cs">
+      <DependentUpon>201812061938393_addImgId2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -301,6 +313,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Game\Index.cshtml" />
+    <Content Include="Views\Game\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -339,6 +352,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812061904419_AddedSellerIdFieldtoGames.resx">
       <DependentUpon>201812061904419_AddedSellerIdFieldtoGames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812061921267_changeSellerIDToString.resx">
+      <DependentUpon>201812061921267_changeSellerIDToString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812061937360_addedImgId.resx">
+      <DependentUpon>201812061937360_addedImgId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812061938393_addImgId2.resx">
+      <DependentUpon>201812061938393_addImgId2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
