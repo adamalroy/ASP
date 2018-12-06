@@ -15,9 +15,34 @@ namespace ASPNETFINAL.Controllers
         private ApplicationDbContext db = new ApplicationDbContext(); 
 
         // GET: Game
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Games.ToList());
+        //}
+
+        public ActionResult Index(string sortOrder)
         {
-            return View(db.Games.ToList());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price"; 
+            //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var games = from g in db.Games
+                        select g; 
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    games = games.OrderByDescending(g => g.GameName);
+                    break;
+                case "Price":
+                    games = games.OrderBy(g => g.Price);
+                    break;
+                case "price_desc":
+                    games = games.OrderByDescending(g => g.Price);
+                    break;
+                default:
+                    games = games.OrderBy(g => g.GameId);
+                    break; 
+            }
+            return View(games.ToList()); 
         }
 
         // GET: Game/Details/5
