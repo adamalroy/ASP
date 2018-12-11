@@ -241,6 +241,14 @@
     <Compile Include="Migrations\201812061938393_addImgId2.Designer.cs">
       <DependentUpon>201812061938393_addImgId2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812111955399_fix.cs" />
+    <Compile Include="Migrations\201812111955399_fix.Designer.cs">
+      <DependentUpon>201812111955399_fix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812111959203_fixtwo.cs" />
+    <Compile Include="Migrations\201812111959203_fixtwo.Designer.cs">
+      <DependentUpon>201812111959203_fixtwo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -367,6 +375,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812061938393_addImgId2.resx">
       <DependentUpon>201812061938393_addImgId2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111955399_fix.resx">
+      <DependentUpon>201812111955399_fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812111959203_fixtwo.resx">
+      <DependentUpon>201812111959203_fixtwo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
