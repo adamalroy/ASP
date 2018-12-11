@@ -10,23 +10,16 @@ namespace ASPNETFINAL.Controllers
 {
     public class CartController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext()
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: Cart
         public ActionResult Index()
         {
             var carts = from c in db.Cart
                         select c;
-            ArrayList currentCarts = new ArrayList();
-            foreach (Cart c in carts)
-            {
-                if (c.UserId.ToString() == User.Identity.ToString())
-                {
-                    currentCarts.Add(c);
-                }
+           
+           
 
-            }
-
-            return View(currentCart.ToList());
+            return View();
         }
 
         // GET: Cart/Details/5
