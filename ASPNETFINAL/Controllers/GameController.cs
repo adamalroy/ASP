@@ -20,13 +20,17 @@ namespace ASPNETFINAL.Controllers
         //    return View(db.Games.ToList());
         //}
 
-        public ActionResult Index(string sortOrder)
+        public ActionResult Index(string sortOrder, string searchString)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price"; 
             //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
             var games = from g in db.Games
                         select g; 
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                games = games.Where(g => g.GameName.Contains(searchString)); 
+            }
             switch (sortOrder)
             {
                 case "name_desc":
