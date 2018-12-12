@@ -13,8 +13,8 @@
     @using (Html.BeginForm())
     {
         <p class="searchBox">
-            Find by name: @Html.TextBox("SearchString")
-            <input type="submit" value="Search"/>
+            <div class="">Find by name: </div><div class="searchBox">@Html.TextBox("SearchString")
+            <input type="submit" value="Search"/></div>
         </p> 
     }
     <table class="table">

@@ -2,13 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\ASPNETFINAL",
+    "\\ASPNETFINAL\\App_Start",
+    "\\ASPNETFINAL\\Content",
     "\\ASPNETFINAL\\Controllers",
-    "\\ASPNETFINAL\\Models",
     "\\ASPNETFINAL\\Views",
-    "\\ASPNETFINAL\\Views\\Cart",
-    "\\ASPNETFINAL\\Views\\Home",
-    "\\ASPNETFINAL\\Views\\Shared"
+    "\\ASPNETFINAL\\Views\\Account",
+    "\\ASPNETFINAL\\Views\\Game",
+    "\\ASPNETFINAL\\Views\\Home"
   ],
-  "SelectedNode": "\\ASPNETFINAL\\Controllers",
   "PreviewInSolutionExplorer": false
 }
