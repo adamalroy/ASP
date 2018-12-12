@@ -154,9 +154,9 @@ namespace ASPNETFINAL.Controllers
             if (ModelState.IsValid)
             {
                 // Added first, last, and user name to User
-                var user = new ApplicationUser { UserName = model.UserNameValue, Email = model.UserNameValue, UserRole = model.RoleId };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, UserRole = model.RoleId };
                 user.UserFirstName = model.UserFirstName;
-                user.UserLastName = model.UserLastName;
+                user.UserLastName = model.Email;
                 user.UserNameValue = model.UserNameValue;
                 user.UserRole = model.RoleId;
                 var result = await UserManager.CreateAsync(user, model.Password);

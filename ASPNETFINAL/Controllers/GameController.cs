@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace ASPNETFINAL.Controllers
 {
@@ -14,9 +15,38 @@ namespace ASPNETFINAL.Controllers
         private ApplicationDbContext db = new ApplicationDbContext(); 
 
         // GET: Game
-        public ActionResult Index()
+        //public ActionResult Index()
+        //{
+        //    return View(db.Games.ToList());
+        //}
+
+        public ActionResult Index(string sortOrder, string searchString)
         {
-            return View(db.Games.ToList());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.PriceSortParm = sortOrder == "Price" ? "price_desc" : "Price"; 
+            //ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "Date";
+            var games = from g in db.Games
+                        select g; 
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                games = games.Where(g => g.GameName.Contains(searchString)); 
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    games = games.OrderByDescending(g => g.GameName);
+                    break;
+                case "Price":
+                    games = games.OrderBy(g => g.Price);
+                    break;
+                case "price_desc":
+                    games = games.OrderByDescending(g => g.Price);
+                    break;
+                default:
+                    games = games.OrderBy(g => g.GameId);
+                    break; 
+            }
+            return View(games.ToList()); 
         }
 
         // GET: Game/Details/5
@@ -35,6 +65,7 @@ namespace ASPNETFINAL.Controllers
         }
 
         // GET: Game/Create
+        [Authorize(Roles ="Seller")]
         public ActionResult Create()
         {
             return View();
@@ -43,10 +74,13 @@ namespace ASPNETFINAL.Controllers
         // POST: Game/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        
         public ActionResult Create([Bind(Include = "GameId, GameName, Genre, Condition, Price, ImgId" )] Game game)
         {
             try
             {
+                game.SellerId = User.Identity.GetUserId();
+                game.ImgId = 1;
                 // TODO: Add insert logic here
                 db.Games.Add(game);
                 db.SaveChanges(); 

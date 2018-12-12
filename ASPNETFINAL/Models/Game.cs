@@ -28,5 +28,11 @@ namespace ASPNETFINAL.Models
         [Required]
         [Range(0.0,300.00)]
         public Decimal Price { get; set; }
+
+        [Required]
+        public string SellerId { get; set; }
+        
+        [Required]
+        public int ImgId { get; set; }
     }
 }
