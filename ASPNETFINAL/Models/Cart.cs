@@ -11,16 +11,20 @@ namespace ASPNETFINAL.Models
     public class Cart
     {
 
+        [Required]
         public int CartId { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         [Required]
         public int GameId { get; set; }
 
         [Required]
         public int Quantity { get; set; }
+
+        [Required]
+        public DateTime DateCreated { get; set; }
 
         [Required]
         public decimal Subtotal { get; set; }

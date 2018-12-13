@@ -22,19 +22,19 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Buy Games", "Index", "Game"))</li>
+                    <li>@Html.ActionLink("Buy Games", "Index", "Game")</li>
                     @{
                         if (User.IsInRole("Seller"))
                         {
                             <li>@Html.ActionLink("Sell Games", "Create", "Game")</li>
                         }
-
                     }
+                    <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
 
                 </ul>
                 
                 @Html.Partial("_LoginPartial")
-                <a class="glyphicon-shopping-cart" href="~/Cart/"></a>
+                
             </div>
         </div>
     </div>

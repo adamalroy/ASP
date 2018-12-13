@@ -1,4 +1,5 @@
 ﻿using ASPNETFINAL.Models;
+using ASPNETFINAL.ViewModels;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,12 +15,16 @@ namespace ASPNETFINAL.Controllers
         // GET: Cart
         public ActionResult Index()
         {
-            var carts = from c in db.Cart
-                        select c;
-           
-           
+            var cart = ShoppingCart.GetCart(this.HttpContext);
 
-            return View();
+            //set up view model
+            var viewModel = new ShoppingCartViewModel
+            {
+                CartItems = cart.GetCartItems()
+               
+            };
+
+            return View(viewModel);
         }
 
         // GET: Cart/Details/5
@@ -93,5 +98,22 @@ namespace ASPNETFINAL.Controllers
                 return View();
             }
         }
+        [HttpPost]
+        public ActionResult RemoveFromCart(int id)
+        {
+            // Remove the item from the cart
+            var cart = ShoppingCart.GetCart(this.HttpContext);
+
+            // Get the name of the album to display confirmation
+
+
+            // Remove from cart
+            int itemCount = cart.RemoveFromCart(id);
+
+            // Display the confirmation message
+
+            return Json("");
+        }
+
     }
 }

@@ -101,4 +101,6 @@ a {
     a:hover {
         color: darkgrey;
     }
-
+.cart {
+    content: url(/Content/Assets/gameTradersBanner.JPG)
+}
